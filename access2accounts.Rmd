@@ -1,0 +1,30 @@
+---
+title: "Access to public accounts"
+author: "MariaProkofieva"
+date: "24/03/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Financial statements and accounting data
+
+Working with accounting starts with getting access to accounting data.
+
+While some paid access is available for accounting data, we are interested in working with free resources at this stage and the blessing comes from a requirement for `public` companies to have their data freely available, though in a "messy" form.
+
+Common issues here:
+
+- data is available as annual reports in various formats, such as pdf, docx, etc
+
+- data comes in various structures - in most cases the format for accounting statements are not fixed to allow companies to communicate `true and fair` presentation of accounts
+
+- country-specific data repositories, e.g. `EDGAR` in US and `Company House` in UK
+
+- country-specific requirements for preparation of accounts, e.g. `IFRS` (International Financial Reporting Standards) and `US GAAP` (General Accepted Accounting Principles).
+
+We are going to work with US accounting data at this stage and [EDGAR](https://www.sec.gov/edgar.shtml)
+
+
