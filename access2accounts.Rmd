@@ -7,6 +7,21 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+#install.packages("devtools")
+#library(devtools)
+
+#https://github.com/bergant/xbrlus
+#devtools::install_github("bergant/xbrlus") 
+
+#https://github.com/bergant/finstr
+#devtools::install_github("bergant/finstr") 
+
+
+library(XBRL)
+library(xbrlus)
+library(finstr)
+library(tidyverse)
 ```
 
 #Financial statements and accounting data
@@ -26,5 +41,15 @@ Common issues here:
 - country-specific requirements for preparation of accounts, e.g. `IFRS` (International Financial Reporting Standards) and `US GAAP` (General Accepted Accounting Principles).
 
 We are going to work with US accounting data at this stage and [EDGAR](https://www.sec.gov/edgar.shtml)
+
+`EDGAR` uses `XBRL` which is a structured format to present information. This "structered data" is available via [`XBRL API`](https://xbrl.us/home/use/xbrl-api/)
+
+Quick reminder: `API` is `Application Program Interface`. It includes a set of `endpoints` that are used to access the data. This allows to have structure in the data and stardardise access. It allows accessing data easier since there is one interface and just different endpoints to use. 
+
+
+[`XBRL.US`](https://xbrl.us) provides access to:
+
+- XBRL US Database of Public Filings (including facts, report and taxonomy details) and - Data Quality Committee (DQC) error messages for all SEC-submitted filings.
+
 
 
