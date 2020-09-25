@@ -17,6 +17,14 @@ knitr::opts_chunk$set(echo = TRUE)
 #https://github.com/bergant/finstr
 #devtools::install_github("bergant/finstr") 
 
+#---------------------
+#SETTINGS
+#XBRL https://xbrl.us/home/about/legal/xbrl-api-clientid/
+#client=RBusiness
+#Client ID: d47a6cf4-005e-44bd-a8c5-fe61bfe43844
+#Client Secret: 094679e1-b0c7-41bf-aee7-6ee36edbed46
+
+XBRLUS_API_KEY=EnterKeyHere
 
 library(XBRL)
 library(xbrlus)
@@ -51,5 +59,19 @@ Quick reminder: `API` is `Application Program Interface`. It includes a set of `
 
 - XBRL US Database of Public Filings (including facts, report and taxonomy details) and - Data Quality Committee (DQC) error messages for all SEC-submitted filings.
 
+### 1. Setting up xbrl access
+
+To start you need to create your xbrl account [here](https://xbrl.us/wp-login.php?action=register)
+
+
+### 2. Collecting the data
+
+To collect the data you need to know the company's ID and what type of data you want
+
+With the company's ID, it should looke like this 
+
+With the type of data, big help is to look at the XBRL taxonomy [here](https://xbrl.us/xbrl-taxonomy/2019-us-gaap/)
+
+The `CIK` is the unique numerical identifier assigned by the EDGAR system to filers when they sign up to make filings to the SEC. CIK numbers remain unique to the filer; they are not recycled.
 
 
